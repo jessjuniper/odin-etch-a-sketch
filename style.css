@@ -1,5 +1,7 @@
 .grid {
     display: flex;
+    flex-wrap: wrap;
+    width: 352px; /*22px width of each box times 16 boxes to force wrap on 17th box*/
 }
 
 .grid > div {
