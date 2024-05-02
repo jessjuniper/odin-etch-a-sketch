@@ -1,0 +1,9 @@
+.grid {
+    display: flex;
+}
+
+.grid > div {
+    border: solid black 1px;
+    min-width: 20px;
+    min-height: 20px;
+}
