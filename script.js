@@ -12,3 +12,14 @@ allSquares.forEach((square) => {
         square.classList.add("filledSquare");
     });
 });
+
+let sizeBtn = document.querySelector(".sizeBtn");
+sizeBtn.addEventListener("click", () => {
+    let gridSize = prompt("Please enter a custom number of squares per side for a new grid.", "0");
+    gridSize = Number(gridSize);
+    console.log(typeof(gridSize));
+    while (gridSize < 0 || gridSize > 100) {
+        gridSize =  prompt("Please enter a positive number of 100 or less.", "0");
+    }
+    //the rest of the code
+})
