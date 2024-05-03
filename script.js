@@ -21,5 +21,22 @@ sizeBtn.addEventListener("click", () => {
     while (gridSize < 0 || gridSize > 100) {
         gridSize =  prompt("Please enter a positive number of 100 or less.", "0");
     }
-    //the rest of the code
+
+    allSquares = document.querySelectorAll(".gridSquare");
+    allSquares.forEach((square) => {
+        square.remove();
+    });
+
+    for (i=0;i<(gridSize*gridSize);i++) {
+        let gridSquare = document.createElement("div");
+        gridSquare.classList.add("gridSquare");
+        grid.appendChild(gridSquare);
+    }
+
+    allSquares = document.querySelectorAll(".gridSquare");
+    allSquares.forEach((square) => {
+    square.addEventListener("mouseover", ()=> {
+        square.classList.add("filledSquare");
+    });
+});
 })
