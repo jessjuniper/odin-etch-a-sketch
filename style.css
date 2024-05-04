@@ -7,13 +7,14 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 352px; /*22px width of each box times 16 boxes to force wrap on 17th box*/
+    height: 500px;
+    width: 500px;
 }
 
 .gridSquare {
     border: solid black 1px;
-    min-width: 20px;
-    min-height: 20px;
+    width: 29.25px;
+    height: 29.25px;
 }
 
 .filledSquare {

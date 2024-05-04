@@ -30,6 +30,7 @@ sizeBtn.addEventListener("click", () => {
     for (i=0;i<(gridSize*gridSize);i++) {
         let gridSquare = document.createElement("div");
         gridSquare.classList.add("gridSquare");
+        gridSquare.setAttribute("style", "height: " + (500/gridSize - 2) + "px; width: " + (500/gridSize - 2) + "px;")
         grid.appendChild(gridSquare);
     }
 
