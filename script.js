@@ -8,8 +8,18 @@ for (i=0;i<256;i++) {
 
 let allSquares = document.querySelectorAll(".gridSquare");
 allSquares.forEach((square) => {
+    let opacity=0.1;
+    let randomRed = Math.floor(Math.random() * 255);
+    let randomGreen = Math.floor(Math.random() * 255);
+    let randomBlue = Math.floor(Math.random() * 255);
     square.addEventListener("mouseover", ()=> {
-        square.classList.add("filledSquare");
+        while(opacity < 0.9) {
+            opacity+=0.1;
+            break;
+        }
+        square.setAttribute("style", "background-color: rgb(" + randomRed + ", " + randomGreen + ", " + randomBlue + ")");
+        square.style.opacity = opacity;
+        //square.classList.add("filledSquare");
     });
 });
 
@@ -36,8 +46,18 @@ sizeBtn.addEventListener("click", () => {
 
     allSquares = document.querySelectorAll(".gridSquare");
     allSquares.forEach((square) => {
+    let opacity=0.1;
+    let randomRed = Math.floor(Math.random() * 255);
+    let randomGreen = Math.floor(Math.random() * 255);
+    let randomBlue = Math.floor(Math.random() * 255);
     square.addEventListener("mouseover", ()=> {
-        square.classList.add("filledSquare");
+        while(opacity < 0.9) {
+            opacity+=0.1;
+            break;
+        }
+        square.style.backgroundColor = "rgb(" + randomRed + ", " + randomGreen + ", " + randomBlue + ")";
+        square.style.opacity = opacity;
+        //square.classList.add("filledSquare");
     });
 });
 })
